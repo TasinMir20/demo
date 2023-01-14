@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const NagadGateway = require("nagad-payment-gateway");
+const { NagadGateway } = require("nagad-payment-gateway");
 
 const config = {
 	apiVersion: "v-0.2.0",
@@ -9,7 +9,7 @@ const config = {
 	merchantNumber: process.env.MERCHANT_NUMBER,
 	privKey: process.env.privateKey,
 	pubKey: process.env.publicKey,
-	isPath: true,
+	isPath: false,
 };
 const nagad = new NagadGateway(config);
 
