@@ -28,7 +28,7 @@ app.get("/*", async (req, res, next) => {
 		});
 		//redirect user to the nagad url
 
-		return res.json({ nagadURL });
+		res.redirect(nagadURL);
 	} catch (err) {
 		console.log(err);
 	}
